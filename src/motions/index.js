@@ -8,8 +8,21 @@ const containerVariants = {
         opacity: 1,
         transition: {
             type: 'spring',
-            delay: 0.5
+            // delay: 0.5,
+            mass: 0.4,
+            damping: 8,
+            when: 'beforeChildren',
+            staggerChildren: 0.4
         }
+    }
+}
+
+const childVariants = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
     }
 }
 
@@ -48,6 +61,7 @@ const hoverItemVariants = {
 
 export {
     containerVariants,
+    childVariants,
     nextVariants,
     hoverButtonVariants,
     hoverItemVariants
