@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { buttonVariants } from '../motions'
@@ -21,7 +21,6 @@ const Home = () => {
           //   boxShadow: '0px 0px 8px rgb(255, 255, 255)'
           // }}
           variants={buttonVariants}
-          animate='visible'
           whileHover='hover'
         >
           Create Your Pizza

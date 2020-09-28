@@ -40,16 +40,21 @@ const nextVariants = {
 }
 
 const buttonVariants = {
-    visible: {
-        x: [0, -20, 20, -20, 20, 0],
-        transition: {
-            delay: 2
-        }
-    },
+    // visible: {
+    //     x: [0, -20, 20, -20, 20, 0, 0, 0, 0, 0, 0, 0],
+    //     transition: {
+    //         repeat: Infinity,
+    //         duration: 4
+    //     }
+    // },
     hover: {
-        scale: [1, 1.1, 1, 1.1, 1, 1.1, 1],
+        scale: 1.1,
         textShadow: '0px 0px 8px rgb(255, 255, 255)',
-        boxShadow: '0px 0px 8px rgb(255, 255, 255)'
+        boxShadow: '0px 0px 8px rgb(255, 255, 255)',
+        transition: {
+            repeat: 3,
+            duration: 0.3
+        }
     }
 }
 
