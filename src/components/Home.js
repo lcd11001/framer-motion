@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { hoverButtonVariants } from '../motions'
+import { buttonVariants } from '../motions'
 
 const Home = () => {
   return (
     <motion.div className="home container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ delay: 1.5, duration: 1.5 }}
+      transition={{ delay: 1.5, duration: 1.5, when: 'beforeChildren' }}
     >
       <h2>
         Welcome to Pizza Joint
@@ -20,7 +20,8 @@ const Home = () => {
           //   textShadow: '0px 0px 8px rgb(255, 255, 255)',
           //   boxShadow: '0px 0px 8px rgb(255, 255, 255)'
           // }}
-          variants={hoverButtonVariants}
+          variants={buttonVariants}
+          animate='visible'
           whileHover='hover'
         >
           Create Your Pizza

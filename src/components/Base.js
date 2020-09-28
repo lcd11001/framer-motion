@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { containerVariants, nextVariants, hoverButtonVariants, hoverItemVariants } from '../motions'
+import { containerVariants, nextVariants, buttonVariants, hoverItemVariants } from '../motions'
 
 
 const Base = ({ addBase, pizza }) => {
@@ -58,7 +58,7 @@ const Base = ({ addBase, pizza }) => {
               //   textShadow: '0px 0px 8px rgb(255, 255, 255)',
               //   boxShadow: '0px 0px 8px rgb(255, 255, 255)'
               // }}
-              variants={hoverButtonVariants}
+              variants={buttonVariants}
               whileHover='hover'
             >
               Next
