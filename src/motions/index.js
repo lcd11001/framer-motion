@@ -161,6 +161,17 @@ const loaderVariants = {
                 ease: 'easeOut'
             }
         }
+    },
+    animationTwo: {
+        y: [0, -40],
+        x: 0,
+        transition: {
+            y: {
+                yoyo: Infinity,
+                duration: 0.25,
+                ease: 'easeOut'
+            }
+        }
     }
 }
 

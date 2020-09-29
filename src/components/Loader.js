@@ -1,17 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, useCycle } from 'framer-motion'
 import { loaderVariants } from '../motions'
 
 const Loader = () => {
+    const [animation, cycleAnimation] = useCycle('animationOne', 'animationTwo')
     return (
         <>
             <motion.div className="loader"
                 variants={loaderVariants}
-                animate='animationOne'
-            >
-
-            </motion.div>
+                animate={animation}
+            />
+            <div onClick={() => cycleAnimation()}>Cycle Loader</div>
         </>
     )
 }
