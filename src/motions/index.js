@@ -1,3 +1,23 @@
+const homeVariants = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+            delay: 1.5,
+            duration: 1.5,
+            when: 'beforeChildren'
+        }
+    },
+    invisible: {
+        x: '-100vw',
+        transition: {
+            ease: 'easeInOut'
+        }
+    }
+}
+
 const containerVariants = {
     hidden: {
         x: '100vw',
@@ -8,11 +28,17 @@ const containerVariants = {
         opacity: 1,
         transition: {
             type: 'spring',
-            // delay: 0.5,
+            delay: 0.1,
             mass: 0.4,
             damping: 8,
             when: 'beforeChildren',
             staggerChildren: 0.4
+        }
+    },
+    invisible: {
+        x: '-100vw',
+        transition: {
+            ease: 'easeInOut'
         }
     }
 }
@@ -71,6 +97,7 @@ const hoverItemVariants = {
 }
 
 export {
+    homeVariants,
     containerVariants,
     childVariants,
     nextVariants,

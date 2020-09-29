@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { buttonVariants } from '../motions'
+import { buttonVariants, homeVariants } from '../motions'
 
 const Home = () => {
   return (
     <motion.div className="home container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.5, duration: 1.5, when: 'beforeChildren' }}
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ delay: 1.5, duration: 1.5, when: 'beforeChildren' }}
+      variants={homeVariants}
+      initial='hidden'
+      animate='visible'
+      exit='invisible'
     >
       <h2>
         Welcome to Pizza Joint
