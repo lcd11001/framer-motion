@@ -105,6 +105,20 @@ const backdropVariants = {
     }
 }
 
+const modalVariants = {
+    hidden: {
+        y: '-100vh',
+        opacity: 0
+    },
+    visible: {
+        y: '30vh',
+        opacity: 1,
+        transition: {
+            delay: 0.5
+        }
+    }
+}
+
 export {
     homeVariants,
     containerVariants,
@@ -112,5 +126,6 @@ export {
     nextVariants,
     buttonVariants,
     hoverItemVariants,
-    backdropVariants
+    backdropVariants,
+    modalVariants
 }
