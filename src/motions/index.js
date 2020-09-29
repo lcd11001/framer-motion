@@ -96,11 +96,21 @@ const hoverItemVariants = {
     }
 }
 
+const backdropVariants = {
+    hidden: {
+        opacity: 0
+    },
+    visible: {
+        opacity: 1
+    }
+}
+
 export {
     homeVariants,
     containerVariants,
     childVariants,
     nextVariants,
     buttonVariants,
-    hoverItemVariants
+    hoverItemVariants,
+    backdropVariants
 }
