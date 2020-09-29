@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { backdropVariants, modalVariants } from '../motions'
+import { backdropVariants, modalVariants, buttonVariants } from '../motions'
 
 const Modal = ({ showModal, setShowModal }) => {
     return (
@@ -19,13 +19,15 @@ const Modal = ({ showModal, setShowModal }) => {
                         >
                             <p>Want to make another pizza?</p>
                             <Link to='/'>
-                                <button
+                                <motion.button
+                                    variants={buttonVariants}
+                                    whileHover='hoverModal'
                                     // use AnimatePresence::onExitComplete instead
                                     // to fixed: modal still show if using browser go back
                                     // onClick={() => setShowModal(false)}
                                 >
                                     Start Again
-                                </button>
+                                </motion.button>
                             </Link>
                         </motion.div>
                     </motion.div>

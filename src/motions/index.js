@@ -81,6 +81,15 @@ const buttonVariants = {
             yoyo: Infinity,
             duration: 0.3
         }
+    },
+    hoverModal: {
+        scale: 1.1,
+        textShadow: '0px 0px 8px rgb(100, 0, 123)',
+        boxShadow: '0px 0px 8px rgb(100, 0, 123)',
+        transition: {
+            yoyo: Infinity,
+            duration: 0.3
+        }
     }
 }
 
